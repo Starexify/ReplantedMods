@@ -1,3 +1,4 @@
+using BadAPI.events;
 using HarmonyLib;
 using Il2CppReloaded.Gameplay;
 
@@ -15,6 +16,10 @@ public static class BoardPatcher
     [HarmonyPatch(typeof(Board), "StartLevel")]
     private static class BoardStartLevelPatch
     {
-        public static void Prefix(Board __instance) => Board = __instance;
+        public static void Prefix(Board __instance)
+        {
+            Board = __instance;
+            BoardEvents.InvokeBoardStarted(__instance);
+        }
     }
 }
