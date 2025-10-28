@@ -14,11 +14,11 @@ public class BadAPICore : MelonMod
     {
         if (_initialized) return;
         _initialized = true;
-        
+
         LoggerInstance.Msg("BadAPI initializing...");
-        
+
         BoardPatcher.Initialize();
-        
+
         LoggerInstance.Msg("BadAPI initialized!");
     }
 }

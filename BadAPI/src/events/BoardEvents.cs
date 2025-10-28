@@ -2,7 +2,8 @@ using Il2CppReloaded.Gameplay;
 
 namespace BadAPI.events;
 
-public class BoardEvents
+#nullable disable
+public static class BoardEvents
 {
     // Define events
     public static event Action<Board> OnBoardStarted;
