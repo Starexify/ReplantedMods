@@ -28,6 +28,6 @@ jobs:
         with:
           name: Release
           path: |
-            BadAPI/bin/Release/net8.0-windows/win-x86
-            FPSCounter/bin/Release/net8.0-windows/win-x86
-            ShovelHotkey/bin/Release/net8.0/win-x86
+            BadAPI/bin/Release/net6.0-windows/win-x64
+            FPSCounter/bin/Release/net6.0-windows/win-x64
+            ShovelHotkey/bin/Release/net6.0/win-x64
