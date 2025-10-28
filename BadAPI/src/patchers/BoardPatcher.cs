@@ -51,14 +51,6 @@ internal static class BoardPatcher
             BoardEvents.InvokeDispose(__instance);
         }
 
-        [HarmonyPatch(nameof(Board.Pause))]
-        [HarmonyPrefix]
-        internal static void PrefixPause(Board __instance, bool thePause)
-        {
-            if (thePause) BoardEvents.InvokePause(__instance, thePause);
-            else BoardEvents.InvokeResume(__instance, thePause);
-        }
-
         [HarmonyPatch(nameof(Board.AddZombie))]
         [HarmonyPrefix]
         internal static void PrefixAddZombie(Board __instance, ZombieType theZombieType, int theFromWave,

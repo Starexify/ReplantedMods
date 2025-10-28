@@ -12,7 +12,7 @@ public class BadMod : MelonMod
         BoardEvents.OnInitPre += board => LoggerInstance.Msg($"Called OnBoardInitPre: {board}");
         BoardEvents.OnInitPost += board => LoggerInstance.Msg($"Called OnBoardInitPost: {board}");
         BoardEvents.OnStartedPre += board => LoggerInstance.Msg($"Called OnBoardStartedPre: {board}");
-        BoardEvents.OnStartedPost += board => LoggerInstance.Msg($"Called OnboardStartedPost: {board}");
+        BoardEvents.OnStartedPost += board => LoggerInstance.Msg($"Called OnBoardStartedPost: {board}");
         BoardEvents.OnDispose += board => LoggerInstance.Msg($"Called OnDispose: {board}");
         //BoardEvents.OnPause += (board, paused) => LoggerInstance.Msg($"Called OnBoardPause: {board} {paused}");
         //BoardEvents.OnResume += (board, paused) => LoggerInstance.Msg($"Called OnBoardResume: {board} {paused}");
