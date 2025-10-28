@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "izvLUFEMFzE=",
+  "dgSpecHash": "l5HuHxK9kno=",
   "success": true,
-  "projectFilePath": "/mnt/hdd/Modding/PvZ Replanted/Mods/TestMod/TestMod.csproj",
+  "projectFilePath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/BadAPI.csproj",
   "expectedPackageFiles": [
     "/home/ImVeryBad/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
   ],

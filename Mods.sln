@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPSCounter", "FPSCounter\FP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShovelHotkey", "ShovelHotkey\ShovelHotkey.csproj", "{10FADB2D-F3A8-4A63-A964-A446FE4ACED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMod", "TestMod\TestMod.csproj", "{5A5DE0BF-1929-4717-B96B-123E595F546B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadAPI", "BadAPI\BadAPI.csproj", "{5A5DE0BF-1929-4717-B96B-123E595F546B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

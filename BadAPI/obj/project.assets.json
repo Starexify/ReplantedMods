@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/hdd/Modding/PvZ Replanted/Mods/TestMod/TestMod.csproj",
-      "projectName": "TestMod",
-      "projectPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/TestMod/TestMod.csproj",
+      "projectUniqueName": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/BadAPI.csproj",
+      "projectName": "BadAPI",
+      "projectPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/BadAPI.csproj",
       "packagesPath": "/home/ImVeryBad/.nuget/packages/",
-      "outputPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/TestMod/obj/",
+      "outputPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ImVeryBad/.nuget/NuGet/NuGet.Config"
