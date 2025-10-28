@@ -9,7 +9,7 @@ public class BadMod : MelonMod
 {
     public override void OnInitializeMelon()
     {
-        BoardEvents.OnBoardStartedPre += board => LoggerInstance.Msg(board);
-        BoardEvents.OnBoardStartedPost += board => LoggerInstance.Msg(board);
+        BoardEvents.OnBoardStartedPre += board => LoggerInstance.Msg("Called OnBoardStartedPre");
+        BoardEvents.OnBoardStartedPost += board => LoggerInstance.Msg("Called OnBoardStartedPost");
     }
 }

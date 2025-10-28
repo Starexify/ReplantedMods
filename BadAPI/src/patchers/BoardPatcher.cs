@@ -9,7 +9,7 @@ internal static class BoardPatcher
 {
     public static Board Board { get; private set; }
 
-    public static void Initialize()
+    public static void Init()
     {
     }
 

@@ -5,6 +5,7 @@ using MelonLoader;
 [assembly: MelonInfo(typeof(BadAPI.BadMod), "BadMod", "0.0.1", "ImVeryBad")]
 [assembly: MelonGame("PopCap Games", "PvZ Replanted")]
 
+#nullable disable
 namespace BadAPI;
 
 public class BadAPI : MelonMod
@@ -20,7 +21,7 @@ public class BadAPI : MelonMod
 
         LoggerInstance.Msg("BadAPI initializing...");
 
-        BoardPatcher.Initialize();
+        BoardPatcher.Init();
 
         LoggerInstance.Msg("BadAPI initialized!");
     }
