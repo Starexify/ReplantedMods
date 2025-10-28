@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <RootNamespace>FPSCounter</RootNamespace>
+        <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
 </Project>
