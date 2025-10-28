@@ -5,9 +5,9 @@ namespace BadAPI.events;
 #nullable disable
 public static class BoardEvents
 {
-    // Define events
-    public static event Action<Board> OnBoardStarted;
- 
-    // Internal methods to trigger events (called by patchers)
-    internal static void InvokeBoardStarted(Board board) => OnBoardStarted?.Invoke(board);
+    public static event Action<Board> OnBoardStartedPre;
+    public static event Action<Board> OnBoardStartedPost;
+    
+    internal static void InvokeBoardStartedPre(Board board) => OnBoardStartedPre?.Invoke(board);
+    internal static void InvokeBoardStartedPost(Board board) => OnBoardStartedPost?.Invoke(board);
 }

@@ -1,4 +1,5 @@
 using BadAPI.patchers;
+using Il2CppReloaded.Gameplay;
 using MelonLoader;
 
 [assembly: MelonInfo(typeof(BadAPI.BadMod), "BadMod", "0.0.1", "ImVeryBad")]
@@ -6,8 +7,10 @@ using MelonLoader;
 
 namespace BadAPI;
 
-public class BadAPICore : MelonMod
+public class BadAPI : MelonMod
 {
+    public static Board Board = BoardPatcher.Board;
+    
     private static bool _initialized = false;
 
     public override void OnInitializeMelon()

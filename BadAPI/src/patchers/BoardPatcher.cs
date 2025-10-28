@@ -5,7 +5,7 @@ using Il2CppReloaded.Gameplay;
 namespace BadAPI.patchers;
 
 #nullable disable
-public static class BoardPatcher
+internal static class BoardPatcher
 {
     public static Board Board { get; private set; }
 
@@ -13,13 +13,15 @@ public static class BoardPatcher
     {
     }
 
-    [HarmonyPatch(typeof(Board), "StartLevel")]
-    private static class BoardStartLevelPatch
+    [HarmonyPatch(typeof(Board), nameof(Board.StartLevel))]
+    [HarmonyPostfix]
+    public static void BoardStartPrefix(Board __instance)
     {
-        public static void Prefix(Board __instance)
-        {
-            Board = __instance;
-            BoardEvents.InvokeBoardStarted(__instance);
-        }
+        Board = __instance;
+        BoardEvents.InvokeBoardStartedPre(__instance);
     }
+
+    [HarmonyPatch(typeof(Board), nameof(Board.StartLevel))]
+    [HarmonyPrefix]
+    public static void BoardStartPostfix(Board __instance) => BoardEvents.InvokeBoardStartedPost(__instance);
 }
