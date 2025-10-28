@@ -13,15 +13,74 @@ internal static class BoardPatcher
     {
     }
 
-    [HarmonyPatch(typeof(Board), nameof(Board.StartLevel))]
-    [HarmonyPostfix]
-    public static void BoardStartPrefix(Board __instance)
+    [HarmonyPatch(typeof(Board))]
+    internal static class BoardPatch
     {
-        Board = __instance;
-        BoardEvents.InvokeBoardStartedPre(__instance);
-    }
+        [HarmonyPatch(nameof(Board.InitLevel))]
+        [HarmonyPrefix]
+        internal static void Prefix(Board __instance)
+        {
+            BoardEvents.InvokeInitPre(__instance);
+        }
 
-    [HarmonyPatch(typeof(Board), nameof(Board.StartLevel))]
-    [HarmonyPrefix]
-    public static void BoardStartPostfix(Board __instance) => BoardEvents.InvokeBoardStartedPost(__instance);
+        [HarmonyPatch(nameof(Board.InitLevel))]
+        [HarmonyPostfix]
+        internal static void Postfix(Board __instance)
+        {
+            BoardEvents.InvokeInitPost(__instance);
+        }
+
+        [HarmonyPatch(nameof(Board.StartLevel))]
+        [HarmonyPrefix]
+        internal static void StartPrefix(Board __instance)
+        {
+            BoardEvents.InvokeStartedPre(__instance);
+        }
+
+        [HarmonyPatch(nameof(Board.StartLevel))]
+        [HarmonyPostfix]
+        internal static void StartPostfix(Board __instance)
+        {
+            BoardEvents.InvokeStartedPost(__instance);
+        }      
+        
+        [HarmonyPatch(nameof(Board.DisposeBoard))]
+        [HarmonyPrefix]
+        internal static void DisposePostfix(Board __instance)
+        {
+            BoardEvents.InvokeDispose(__instance);
+        }
+
+        [HarmonyPatch(nameof(Board.Pause))]
+        [HarmonyPrefix]
+        internal static void PrefixPause(Board __instance, bool thePause)
+        {
+            if (thePause) BoardEvents.InvokePause(__instance, thePause);
+            else BoardEvents.InvokeResume(__instance, thePause);
+        }
+
+        [HarmonyPatch(nameof(Board.AddZombie))]
+        [HarmonyPrefix]
+        internal static void PrefixAddZombie(Board __instance, ZombieType theZombieType, int theFromWave,
+            bool shakeBrush)
+        {
+            BoardEvents.InvokeZombieSpawn(__instance, theZombieType, theFromWave, shakeBrush);
+        }
+
+        [HarmonyPatch(nameof(Board.AddZombie))]
+        [HarmonyPostfix]
+        internal static void PostfixAddZombie(Board __instance, ZombieType theZombieType, int theFromWave,
+            bool shakeBrush, Zombie __result)
+        {
+            BoardEvents.InvokeZombieSpawned(__instance, __result, theZombieType, theFromWave, shakeBrush);
+        }
+
+        [HarmonyPatch(nameof(Board.AddPlant))]
+        [HarmonyPrefix]
+        internal static void PrefixAddPlant(Board __instance, int theGridX, int theGridY, SeedType theSeedType,
+            SeedType theImitaterType)
+        {
+            BoardEvents.InvokePlantPlanted(__instance, theGridX, theGridY, theSeedType, theImitaterType);
+        }
+    }
 }
