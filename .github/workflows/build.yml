@@ -22,3 +22,12 @@ jobs:
 
       - name: Build All Projects
         run: dotnet build Mods.sln -c Release
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Release
+          path: |
+            BadAPI/bin/Release/net8.0-windows/win-x86
+            FPSCounter/bin/Release/net8.0-windows/win-x86
+            ShovelHotkey/bin/Release/net8.0/win-x86
