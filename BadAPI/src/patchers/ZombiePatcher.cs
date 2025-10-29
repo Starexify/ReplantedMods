@@ -27,6 +27,18 @@ internal static class ZombiePatcher
                 controller);
         }
 
+        [HarmonyPatch(nameof(Zombie.DieNoLoot))]
+        [HarmonyPrefix]
+        internal static void DieNoLootPre(Zombie __instance) => ZombieEvents.InvokeDie(__instance);
+
+        [HarmonyPatch(nameof(Zombie.DieDeserialize))]
+        [HarmonyPrefix]
+        internal static void DieDesPre(Zombie __instance) => ZombieEvents.InvokeDie(__instance);
+
+        [HarmonyPatch(nameof(Zombie.DieWithLoot))]
+        [HarmonyPrefix]
+        internal static void DieLootPre(Zombie __instance) => ZombieEvents.InvokeDie(__instance);
+
         [HarmonyPatch(nameof(Zombie.EatPlant))]
         [HarmonyPrefix]
         internal static void EatPlantPre(Zombie __instance, Plant thePlant)
@@ -39,6 +51,13 @@ internal static class ZombiePatcher
         internal static void EatZombiePre(Zombie __instance, Zombie theZombie)
         {
             ZombieEvents.InvokeEatingZombie(__instance, theZombie);
+        }
+
+        [HarmonyPatch(nameof(Zombie.TakeDamage))]
+        [HarmonyPrefix]
+        internal static void DamagePre(Zombie __instance, int theDamage, DamageFlags theDamageFlags)
+        {
+            ZombieEvents.InvokeDamage(__instance, theDamage, theDamageFlags);
         }
     }
 }

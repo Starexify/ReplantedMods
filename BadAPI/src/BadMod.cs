@@ -9,6 +9,8 @@ public class BadMod : MelonMod
 {
     public override void OnInitializeMelon()
     {
+        // Board Events
+        /*
         BoardEvents.OnInitPre += board => LoggerInstance.Msg($"Called BoardEvents OnBoardInitPre: {board}");
         BoardEvents.OnInitPost += board => LoggerInstance.Msg($"Called BoardEvents OnBoardInitPost: {board}");
         BoardEvents.OnStartedPre += board => LoggerInstance.Msg($"Called BoardEvents OnBoardStartedPre: {board}");
@@ -38,9 +40,10 @@ public class BadMod : MelonMod
         BoardEvents.OnProjectileAdded += (board, projectile, xPos, yPos, renderOrder, row, projectileType) =>
             LoggerInstance.Msg(
                 $"Called BoardEvents OnProjectileAdded with params {board} {projectile} {xPos} {yPos} {renderOrder} {row} {projectileType}");
-
+                */
 
         // Plant Events
+        /*
         PlantEvents.OnInitPre += (plant, gridX, gridY, seedType, imitaterType, controller) =>
             LoggerInstance.Msg(
                 $"Called PlantEvents OnInitPre with params {plant} {gridX} {gridY} {seedType} {imitaterType} {controller}");
@@ -56,6 +59,7 @@ public class BadMod : MelonMod
 
         PlantEvents.OnSpecial += (plant) =>
             LoggerInstance.Msg($"Called PlantEvents OnSpecial with params {plant}");
+            */
 
         // Zombie Events
         ZombieEvents.OnInitPre += (zombie, row, zombieType, variant, parentZombie, fromWave, controller) =>
@@ -66,10 +70,15 @@ public class BadMod : MelonMod
             LoggerInstance.Msg(
                 $"Called ZombieEvents OnInitPost with params {zombie} {row} {zombieType} {variant} {parentZombie} {fromWave} {controller}");
 
+        ZombieEvents.OnDie += (zombie) => LoggerInstance.Msg($"Called ZombieEvents OnInitPre with params {zombie}");
+
         ZombieEvents.OnEatingPlant += (zombie, plant) =>
             LoggerInstance.Msg($"Called ZombieEvents OnEatingZombie with params {zombie} {plant}");
 
         ZombieEvents.OnEatingZombie += (zombie, targetZombie) =>
             LoggerInstance.Msg($"Called ZombieEvents OnEatingZombie with params {zombie} {targetZombie}");
+
+        ZombieEvents.OnDamage += (zombie, damage, damageFlags) =>
+            LoggerInstance.Msg($"Called ZombieEvents OnDamage with params {zombie} {damage} {damageFlags}");
     }
 }
