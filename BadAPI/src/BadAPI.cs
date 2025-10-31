@@ -2,7 +2,7 @@ using BadAPI.patchers;
 using Il2CppReloaded.Gameplay;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(BadAPI.BadMod), "BadMod", "0.0.1", "ImVeryBad")]
+[assembly: MelonInfo(typeof(BadAPI.BadAPI), "BadAPI", "0.0.1", "ImVeryBad")]
 [assembly: MelonGame("PopCap Games", "PvZ Replanted")]
 
 #nullable disable
