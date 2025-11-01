@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShovelHotkey", "ShovelHotke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadAPI", "BadAPI\BadAPI.csproj", "{5A5DE0BF-1929-4717-B96B-123E595F546B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebalanced", "Rebalanced\Rebalanced.csproj", "{35ACA808-FDA8-4331-9645-64A0F23EC47A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5A5DE0BF-1929-4717-B96B-123E595F546B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5DE0BF-1929-4717-B96B-123E595F546B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A5DE0BF-1929-4717-B96B-123E595F546B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35ACA808-FDA8-4331-9645-64A0F23EC47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35ACA808-FDA8-4331-9645-64A0F23EC47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35ACA808-FDA8-4331-9645-64A0F23EC47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35ACA808-FDA8-4331-9645-64A0F23EC47A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

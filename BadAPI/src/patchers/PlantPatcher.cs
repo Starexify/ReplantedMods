@@ -34,9 +34,10 @@ internal static class PlantPatcher
 
         [HarmonyPatch(nameof(Plant.Fire))]
         [HarmonyPrefix]
-        internal static void DiePre(Plant __instance, Zombie theTargetZombie, int theRow, PlantWeapon thePlantWeapon)
+        internal static void FirePre(Plant __instance, Zombie theTargetZombie, int theRow,
+            ref PlantWeapon thePlantWeapon)
         {
-            PlantEvents.InvokeOnShoot(__instance, theTargetZombie, theRow, thePlantWeapon);
+            PlantEvents.InvokeOnShoot(__instance, theTargetZombie, theRow, ref thePlantWeapon);
         }
 
         [HarmonyPatch(nameof(Plant.DoSpecial))]
