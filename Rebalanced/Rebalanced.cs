@@ -78,7 +78,7 @@ public class Rebalanced : MelonMod
             }
         }
 
-        [HarmonyPatch(nameof(AlmanacEntryData.EntryRecharge), MethodType.Getter)]
+        /*[HarmonyPatch(nameof(AlmanacEntryData.EntryRecharge), MethodType.Getter)]
         [HarmonyPostfix]
         internal static void RechargePost(AlmanacEntryData __instance, ref string __result)
         {
@@ -86,7 +86,7 @@ public class Rebalanced : MelonMod
             {
                 __result = entry.Recharge;
             }
-        }
+        }*/
     }
 
     // Increase plant cost and lower refresh time
