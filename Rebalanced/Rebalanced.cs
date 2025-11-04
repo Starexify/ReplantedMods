@@ -78,15 +78,12 @@ public class Rebalanced : MelonMod
             }
         }
 
-        /*[HarmonyPatch(nameof(AlmanacEntryData.EntryRecharge), MethodType.Getter)]
+        [HarmonyPatch(nameof(AlmanacEntryData.EntryRecharge), MethodType.Getter)]
         [HarmonyPostfix]
         internal static void RechargePost(AlmanacEntryData __instance, ref string __result)
         {
-            if (AlmanacEntries.TryGetValue(__instance.m_seedType, out var entry) && entry.Recharge != null)
-            {
-                __result = entry.Recharge;
-            }
-        }*/
+            __result = "slow";
+        }
     }
 
     // Increase plant cost and lower refresh time
