@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPSCounter", "FPSCounter\FPSCounter.csproj", "{E5AC4707-C89D-4C90-911C-D5232BB4E2D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShovelHotkey", "ShovelHotkey\ShovelHotkey.csproj", "{10FADB2D-F3A8-4A63-A964-A446FE4ACED5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadHotkeys", "BadHotkeys\BadHotkeys.csproj", "{10FADB2D-F3A8-4A63-A964-A446FE4ACED5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadAPI", "BadAPI\BadAPI.csproj", "{5A5DE0BF-1929-4717-B96B-123E595F546B}"
 EndProject

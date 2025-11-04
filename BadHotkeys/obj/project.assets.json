@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "BadAPI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BadAPI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BadAPI.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BadAPI/1.0.0": {
+      "type": "project",
+      "path": "../BadAPI/BadAPI.csproj",
+      "msbuildProject": "../BadAPI/BadAPI.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "BadAPI >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/ImVeryBad/.nuget/packages/": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/hdd/Modding/PvZ Replanted/Mods/ShovelHotkey/ShovelHotkey.csproj",
-      "projectName": "ShovelHotkey",
-      "projectPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/ShovelHotkey/ShovelHotkey.csproj",
+      "projectUniqueName": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadHotkeys/BadHotkeys.csproj",
+      "projectName": "BadHotkeys",
+      "projectPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadHotkeys/BadHotkeys.csproj",
       "packagesPath": "/home/ImVeryBad/.nuget/packages/",
-      "outputPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/ShovelHotkey/obj/",
+      "outputPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadHotkeys/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ImVeryBad/.nuget/NuGet/NuGet.Config"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/BadAPI.csproj": {
+              "projectPath": "/mnt/hdd/Modding/PvZ Replanted/Mods/BadAPI/BadAPI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -9,6 +9,7 @@ public static class BoardEvents
     public static event Action<Board> OnInitPost;
     public static event Action<Board> OnStartedPre;
     public static event Action<Board> OnStartedPost;
+    public static event Action<Board> OnUpdate;
     public static event Action<Board, bool> OnPause;
     public static event Action<Board, bool> OnResume;
     public static event Action<Board> OnDispose;
@@ -24,6 +25,7 @@ public static class BoardEvents
     internal static void InvokeStartedPre(Board board) => OnStartedPre?.Invoke(board);
     internal static void InvokeStartedPost(Board board) => OnStartedPost?.Invoke(board);
     internal static void InvokeDispose(Board board) => OnDispose?.Invoke(board);
+    internal static void InvokeUpdate(Board board) => OnUpdate?.Invoke(board);
     internal static void InvokePause(Board board, bool paused) => OnPause?.Invoke(board, paused);
     internal static void InvokeResume(Board board, bool paused) => OnResume?.Invoke(board, paused);
 

@@ -51,6 +51,13 @@ internal static class BoardPatcher
             BoardEvents.InvokeDispose(__instance);
         }
 
+        [HarmonyPatch(nameof(Board.Update))]
+        [HarmonyPrefix]
+        internal static void UpdatePre(Board __instance)
+        {
+            BoardEvents.InvokeUpdate(__instance);
+        }
+
         [HarmonyPatch(nameof(Board.AddZombie))]
         [HarmonyPrefix]
         internal static void AddZombiePre(Board __instance, ZombieType theZombieType, int theFromWave,
